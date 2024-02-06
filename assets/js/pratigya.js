@@ -15,3 +15,15 @@ $(document).ready(function(){
       	}
     });
 });
+
+function downloadCv() {
+    var fileName = 'PratigyaDhakalCV.pdf';
+    var pdfPath = '/assets/imgs/' + fileName;
+
+    var downloadLink = document.createElement('a');
+    downloadLink.href = pdfPath;
+    downloadLink.download = fileName;
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+}
